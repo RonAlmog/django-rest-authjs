@@ -187,8 +187,7 @@ else:
 SOCIALACCOUNT_PROVIDERS = {
     "google": {
         "APP": {
-            "client_id": "1090578328154-f0tja5iha0ne50n1d9e5uvacch44a3u2.apps.googleusercontent.com",  # replace me
-            "secret": "2JBEzmiixTNFuFxUXQD8KAHQ",        # replace me
+            
             "key": "",                               # leave empty
         },
         "SCOPE": [
