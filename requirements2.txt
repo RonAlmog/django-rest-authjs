@@ -3,6 +3,5 @@ djangorestframework
 djangorestframework-simplejwt
 requests
 django-cors-headers
-django-allauth
-dj-rest-auth[with_social]
-
+django-allauth==0.50.0
+dj-rest-auth[with_social]==4.0.1

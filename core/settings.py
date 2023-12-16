@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",  # for social authentication
+    "allauth.socialaccount.providers.google",  # google!
 
     "dj_rest_auth",
     "dj_rest_auth.registration",
@@ -63,7 +64,7 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
 
-    "allauth.account.middleware.AccountMiddleware",
+    #"allauth.account.middleware.AccountMiddleware",
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -183,3 +184,20 @@ else:
         "http://127.0.0.1:3000/",
     ]
 
+SOCIALACCOUNT_PROVIDERS = {
+    "google": {
+        "APP": {
+            "client_id": "1090578328154-f0tja5iha0ne50n1d9e5uvacch44a3u2.apps.googleusercontent.com",  # replace me
+            "secret": "2JBEzmiixTNFuFxUXQD8KAHQ",        # replace me
+            "key": "",                               # leave empty
+        },
+        "SCOPE": [
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+        },
+        "VERIFIED_EMAIL": True,
+    },
+}
